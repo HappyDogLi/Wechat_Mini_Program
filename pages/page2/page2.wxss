@@ -1,0 +1,12 @@
+/* pages/page2/page2.wxss */
+.title{
+    display: flex;
+    font-size: 30px;
+    font-weight: 400;
+    background: -webkit-linear-gradient(left, #6cc6cb, #ef33b1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    align-items: center;
+    justify-content: center; 
+  }

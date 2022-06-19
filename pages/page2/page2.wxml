@@ -1,0 +1,6 @@
+<!--pages/page2/page2.wxml-->
+<view>
+    <title class="title">合适的产品是:{{input1}}</title>
+</view>
+<!-- <text>合适的产品是:{{input1}}</text> -->
+<!-- <text>合适的产品是:{{input2}}</text> -->

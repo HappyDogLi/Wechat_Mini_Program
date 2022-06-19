@@ -1,0 +1,44 @@
+<!--index.wxml-->
+
+<view class="title">人单合一</view>
+  <!-- 输入框样式 -->
+  <view class="view-contain-ti">
+    <text class="text-ti">公司名称</text>
+    <input class="input1" bindinput='Input_1'></input>
+</view>
+
+<view class="view-contain-ti">
+    <text class="text-ti">输入条件2</text>
+    <input class="input1"  bindinput='Input_2'></input>
+</view>
+
+<view class="view-contain-ti">
+    <text class="text-ti">营业收入</text>
+    <input class="input1"></input>
+</view>
+
+<view class="view-contain-ti">
+    <text class="text-ti">输入条件3</text>
+    <input class="input1"></input>
+</view>
+
+<view class="view-contain-ti">
+    <text class="text-ti">营业收入</text>
+    <input class="input1"></input>
+</view>
+
+<view class="view-contain-ti">
+    <text class="text-ti">输入条件3</text>
+    <input class="input1"></input>
+</view>
+
+<view class="view-contain-ti">
+    <text class="text-ti">营业收入</text>
+    <input class="input1"></input>
+</view>
+
+<view class="view-contain-ti">
+    <text class="text-ti">输入条件3</text>
+    <input class="input1"></input>
+</view>
+<button class="button-contain" bindtap="aaa" >提交</button>
