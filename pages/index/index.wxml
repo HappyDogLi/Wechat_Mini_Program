@@ -24,6 +24,39 @@
             </view>
 </view>
 
+<view class="view-contain-ti-special">
+        <text class="text-ti">是否中小企业</text>
+        <checkbox-group bindchange="checkboxChange" class="check-box">
+        <label class="checkbox" wx:for-items="{{items}}">
+            <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+        </label>
+    </checkbox-group>
+</view>
+<view class="view-contain-ti-special">
+        <text class="text-ti">是否中小企业</text>
+        <checkbox-group bindchange="checkboxChange" class="check-box">
+        <label class="checkbox" wx:for-items="{{items}}">
+            <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+        </label>
+    </checkbox-group>
+</view>
+<view class="view-contain-ti-special">
+        <text class="text-ti">是否中小企业</text>
+        <checkbox-group bindchange="checkboxChange" class="check-box">
+        <label class="checkbox" wx:for-items="{{items}}">
+            <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+        </label>
+    </checkbox-group>
+</view>
+<view class="view-contain-ti-special">
+        <text class="text-ti">是否中小企业</text>
+        <checkbox-group bindchange="checkboxChange" class="check-box">
+        <label class="checkbox" wx:for-items="{{items}}">
+            <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+        </label>
+    </checkbox-group>
+</view>
+
 <view class="view-contain-ti">
     <text class="text-ti">输入条件3</text>
     <input class="input1"  bindinput='Input_2'></input>
@@ -71,3 +104,4 @@
 <view>
 <text>\n\n</text>
 </view>
+

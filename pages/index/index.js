@@ -10,6 +10,7 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     canIUseGetUserProfile: false,
     canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName'), // 如需尝试获取用户信息可改为false
+
     // 获取input值
     input1: "",
     input2: "",
@@ -17,6 +18,7 @@ Page({
     input4: "",
     input5: "",
     result_str: "",
+
     //下拉选择框
     tabType: 'tab1',
     key: 'tab1',
@@ -41,6 +43,14 @@ Page({
         id: '1'
     },
     conditionVisible: false,
+    
+    // 复选框
+    items: [
+      {name: 'YES', value: '是'},
+      {name: 'NO', value: '否'},
+      // {name: 'NO', value: '否', checked: 'true'},
+    ],
+    item_1_checked:'NO'
 
   },
   Input_1:function(e){
@@ -146,4 +156,9 @@ onChnageCondition(e) {
         conditionList: list
     })
 },
+// 复选框点击事件
+checkboxChange: function(e) {
+  this.data.item_1_checked = e.detail.value;
+  console.log('checkbox发生change事件，携带value值为：',this.data.item_1_checked)
+}
 })

@@ -162,7 +162,7 @@
   /* 特殊类型的边框 */
   .view-contain-ti-special {
     display: flex;
-    height: 70px;
+    height: 62px;
     margin: 20px;
     border: 2rpx solid #faca82;
     border-radius: 50rpx;
@@ -180,4 +180,9 @@
     -webkit-text-fill-color: transparent;
     align-items: center;
     justify-content: center; 
+  }
+  .check-box{
+    display: inline;
+    margin: 20px;
+    color: rgb(144, 147, 167);
   }
