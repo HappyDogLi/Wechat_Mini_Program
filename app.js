@@ -15,7 +15,8 @@ App({
   },
   globalData: {
     userInfo: null,
-    input1: 1,
+    input1: '',
     input2: null,
+    result_str: '服务器未响应，请联系管理员',
   }
 })

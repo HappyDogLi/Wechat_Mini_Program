@@ -1,12 +1,56 @@
 /* pages/page2/page2.wxss */
-.title{
+.text1{
     display: flex;
     font-size: 30px;
     font-weight: 400;
-    background: -webkit-linear-gradient(left, #6cc6cb, #ef33b1);
-    -webkit-background-clip: text;
+    color:#af231c;
+    /* background:#af231c; */
+    /* -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
     align-items: center;
     justify-content: center; 
+  }
+  .text2{
+    display: flex;
+    font-size: 25px;
+    font-weight: 200;
+    color:#faca82;
+    /* background:#af231c; */
+    /* -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    align-items: center;
+    justify-content: center; 
+  }
+  .text3{
+    display: flex;
+    font-size: 15px;
+    /* font-weight: 400; */
+    color:#af231c;
+    /* background:#af231c; */
+    /* -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    align-items: center;
+    justify-content: center; 
+  }
+  .father1{
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+  }
+  .father2{
+    height: 50vh;
+    width: 100%;
+    /* display: flex; */
+    margin-top: 10%;
+    justify-content: center;
+    background-color: #ffffff;
+  }
+  .button{
+    height: 20vh;
+    width: 100%;
   }

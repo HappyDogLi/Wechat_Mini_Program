@@ -1,44 +1,73 @@
 <!--index.wxml-->
 
-<view class="title">人单合一</view>
+<view class="title">人单合一（测试环境）</view>
   <!-- 输入框样式 -->
   <view class="view-contain-ti">
     <text class="text-ti">公司名称</text>
     <input class="input1" bindinput='Input_1'></input>
 </view>
 
+<view name="营业收入" class="view-contain-ti-special">
+    <text class="text-ti">营业收入（单位：万元）</text>
+        <!-- 下拉选择框 -->
+            <view class="search-bar">
+                    <view class="condition" bindtap="showCondition">
+                        <view class="select-condition">{{choosedCondition.title}}</view>
+                        <view class="trigger {{ conditionVisible ? 'reverse' : ''}}"></view>
+                        <cover-view class="option-list" style="height: {{conditionVisible ? '300rpx': '0'}}">
+                            <cover-view bindtap="onChnageCondition" data-id="{{item.id}}" class="list-item" wx:for="{{conditionList}}" wx:key="index" wx:for-index="index">
+                                <cover-view class="item-special-title">{{item.title}}</cover-view>
+                                <cover-view class="item-special-title" wx:if="{{item.select}}">√</cover-view>
+                            </cover-view>
+                        </cover-view>
+                    </view>
+            </view>
+</view>
+
 <view class="view-contain-ti">
-    <text class="text-ti">输入条件2</text>
+    <text class="text-ti">输入条件3</text>
     <input class="input1"  bindinput='Input_2'></input>
 </view>
 
+
 <view class="view-contain-ti">
-    <text class="text-ti">营业收入</text>
+    <text class="text-ti">输入条件4</text>
     <input class="input1"></input>
 </view>
 
 <view class="view-contain-ti">
-    <text class="text-ti">输入条件3</text>
+    <text class="text-ti">输入条件5</text>
     <input class="input1"></input>
 </view>
 
 <view class="view-contain-ti">
-    <text class="text-ti">营业收入</text>
+    <text class="text-ti">输入条件6</text>
     <input class="input1"></input>
 </view>
 
 <view class="view-contain-ti">
-    <text class="text-ti">输入条件3</text>
+    <text class="text-ti">输入条件7</text>
     <input class="input1"></input>
 </view>
 
 <view class="view-contain-ti">
-    <text class="text-ti">营业收入</text>
+    <text class="text-ti">输入条件8</text>
     <input class="input1"></input>
 </view>
 
 <view class="view-contain-ti">
-    <text class="text-ti">输入条件3</text>
+    <text class="text-ti">输入条件9</text>
     <input class="input1"></input>
 </view>
+
+<view class="view-contain-ti">
+    <text class="text-ti">输入条件10</text>
+    <input class="input1"></input>
+</view>
+<!-- 提交按钮 -->
 <button class="button-contain" bindtap="aaa" >提交</button>
+
+<!-- 占位 -->
+<view>
+<text>\n\n</text>
+</view>

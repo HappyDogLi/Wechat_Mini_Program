@@ -16,6 +16,32 @@ Page({
     input3: "",
     input4: "",
     input5: "",
+    result_str: "",
+    //下拉选择框
+    tabType: 'tab1',
+    key: 'tab1',
+    conditionList: [{
+            title: '0-10',
+            id: '1',
+            select: true
+        },
+        {
+            title: '11-20',
+            id: '2',
+            select: false
+        },
+        {
+            title: '21-30',
+            id: '3',
+            select: false
+        },
+    ],
+    choosedCondition: {
+        title: '请输入',
+        id: '1'
+    },
+    conditionVisible: false,
+
   },
   Input_1:function(e){
     this.data.input1=e.detail.value;
@@ -23,16 +49,43 @@ Page({
   Input_2:function(e){
     this.data.input2=e.detail.value;
   },
+
+  LoadMydata(){
+    var app = getApp();
+    app.globalData.result_str = this.data.result_str
+  },
+
   aaa(){
     // 将input赋值到全局变量
+    var that = this
     var app = getApp();
     app.globalData.input1 = this.data.input1
     app.globalData.input2 = this.data.input2
+    console.log(this.data.choosedCondition)
     
-    // 跳转到下个界面
-    wx.navigateTo({
-      url: '../page2/page2',
-    })
+    // 跳转到page1 等待响应
+        wx.navigateTo({
+          url: '../page1/page1',
+        }),
+    
+        //request 请求
+    wx.request({
+      url: 'https://lqyj.xyz', //仅为示例，并非真实的接口地址
+      data: {
+        in_1:app.globalData.input1,
+        in_2:app.globalData.input2
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success (res) {
+        that.setData({
+          result_str:res.data
+        })
+        that.LoadMydata()        
+      }
+    }
+    )
   },
   // 事件处理函数
   bindViewTap() {
@@ -69,4 +122,28 @@ Page({
     })
   },
 
+  // 下拉框
+  showCondition() {
+    this.setData({
+        conditionVisible: !this.data.conditionVisible
+    })
+},
+// 改变查询项
+onChnageCondition(e) {
+    const list = this.data.conditionList
+    list.forEach(item => {
+        if (item.id === e.currentTarget.dataset.id) {
+            item.select = true
+            this.setData({
+                'choosedCondition.title': item.title,
+                'choosedCondition.id': item.id
+            })
+        } else {
+            item.select = false
+        }
+    })
+    this.setData({
+        conditionList: list
+    })
+},
 })

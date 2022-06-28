@@ -10,19 +10,19 @@ Page({
     input3: "",
     input4: "",
     input5: "",
-    msg: "test",
+    msg: "",
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        var arr = getApp()
+        var app = getApp()
+        console.log(app.globalData)
         this.setData({
-            input1 : arr.globalData.input1,
-            input2 : arr.globalData.input2,
-            input3 : arr.globalData.input3,
+            msg : app.globalData.result_str
         })
+
     },
 
     /**

@@ -1,6 +1,12 @@
 <!--pages/page2/page2.wxml-->
-<view>
-    <title class="title">合适的产品是:{{input1}}</title>
+<view class="father1">
+    <view class="text1">合适的产品是:\n</view>
 </view>
-<!-- <text>合适的产品是:{{input1}}</text> -->
-<!-- <text>合适的产品是:{{input2}}</text> -->
+
+<view class="father2">
+    <view class="text2">{{msg}}</view>
+</view>
+<view class="button">
+    <view class="text3">结果仅供参考</view>
+    <view class="text3">Author@2022</view>
+</view>
