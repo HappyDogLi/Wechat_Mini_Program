@@ -162,7 +162,7 @@
   /* 特殊类型的边框 */
   .view-contain-ti-special {
     display: flex;
-    height: 60px;
+    height: 70px;
     margin: 20px;
     border: 2rpx solid #faca82;
     border-radius: 50rpx;
